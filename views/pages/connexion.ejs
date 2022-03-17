@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main >
+        <form  autocomplete="on" action="/connexion" method="POST" >
+            <div class="form">
+                <h2>Connexion</h2>
+                <div class="formulaire-custom">
+                    <div class="champ">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" placeholder="Email" id = "mail" required />
+                    </div>
+                    <div class="champ">
+                        <label  for="password">Password</label>
+                        <input type="password" name="password" placeholder="Mot de passe" id="password" required />
+                    </div>
+                </div>
+                    <button type="submit">Se connecter</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

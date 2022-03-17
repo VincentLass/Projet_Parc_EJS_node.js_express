@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="attraction">
+
+        <h2>Attractions</h2>
+            <% if (attraction.length > 0 ) { %>
+                <% attraction.forEach( a => { %>
+
+                    <div class="attraction-form">
+                        <img alt="photo-attraction" src="<%= a.image %>" name="attraction" >
+                        <div class="attraction-presentation">
+                            <h3><%=a.nom %></h3>
+                            <p><%= a.description %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %> 
+
+                <p>Aucunes attractions disponibles</p>
+
+            <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+
+</html>
+

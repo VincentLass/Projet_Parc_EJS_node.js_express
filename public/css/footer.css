@@ -1,0 +1,40 @@
+/* positionnement du footer */
+.footer-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    color:white;
+}
+
+/* dimensionnement des logos */
+.logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    border: solid 1px white;
+    margin: 5px;
+}
+
+/* permet d'enlever le point devant les li */
+ul{
+    list-style-type: none;
+}
+
+
+@media screen and (max-width: 760px){
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-network{
+        order: 0;
+        padding: 10px;
+    }
+    .location{
+        order: 1;
+    }
+    .contact{
+        order: 2;
+    }
+}

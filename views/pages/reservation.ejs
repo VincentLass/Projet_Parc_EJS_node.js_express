@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <main>
+        <form  autocomplete="on" method="POST" action=""  >
+            <div class="form">
+                <h2>Réservation</h2>
+                <div class="formulaire-custom">
+                    <div class="champ">
+                        <label for="name">Nom</label>
+                        <input type="text" name="nom" placeholder="Nom" id="name" pattern="[a-zA-Z]{2,}" required />
+                    </div>
+                    <div class="champ">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" placeholder="Email" id = "mail" required />
+                    </div>
+                    <div class="champ">
+                        <label for="date">Date</label>
+                        <input type="date" name="date"  id="date" required />
+                    </div>
+                    <div class="champ">
+                        <label for="places">Places</label>
+                        <input type="number" name="places" placeholder="Places" id = "places" required />
+                    </div>
+                    <div class="champ">
+                        <label for="message">Laissez un message</label>
+                        <textarea type="text" name="message" placeholder="Laissez un message si besoin" id="message" ></textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Réinitialiser</button>
+                </div>
+            </div>
+        </form> 
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

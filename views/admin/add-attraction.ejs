@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body class="container">
+        <header class="header-position">
+            <%- include('../partials/admin-header'); %>
+        </header>
+
+        <main>
+            <form method="POST" action="">
+                <div class="form">
+                    <h2>Ajouter une attraction</h2>
+                    <div class="formulaire-custom">
+                        <div class="champ">
+                            <label  for="nom">Nom de l'attraction</label>
+                            <input type="text" name="nom" placeholder="Nom de l'attraction" id = "nom"  required />
+                        </div>
+                        <div class="champ">
+                            <label  for="image">Image de l'attraction</label>
+                            <input type="text" name="image" placeholder="Image de l'attraction" id="image"  />
+                        </div>
+                        <div class="champ">
+                            <label  for="description">Description de l'attraction</label>
+                            <input type="text" name="description" placeholder="Description de l'attraction" id="description" required />
+                        </div>
+                    </div>
+                    <button type="submit">Ajouter</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+ 
+    <header class="header-position">
+        <%- include('../partials/admin-header'); %>
+    </header>
+
+    <main>
+        <h2>Gestion des réservations</h2>
+        
+            <% if (reservations.length > 0 ) { %>
+                <% for (let reservation of reservations) { %>
+                    <div class="admin-modif">
+
+                        <p>Numéro de la réservation: <strong style="color:black"><%= reservation.id %></strong></p>
+                        <p>Nom de la réservation: <strong style="color:black"><%= reservation.nom %></strong></p>
+                        <p>Email de la réservation: <strong style="color:black"><%= reservation.mail %></strong></p>
+                        <p>Date de la réservation: <strong style="color:black"><%= reservation.date %></strong></p>
+                        <p>Nombre de places de la réservation: <strong style="color:black"><%= reservation.places %></strong></p>
+                        <p>Message de la réservation: <strong style="color:black"><%= reservation.message %></strong></p>
+                                        
+                    </div>
+                
+                <% } %>
+            <% } else { %> 
+                <p>Il n'y a pas de réservations</p>
+            <% } %>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

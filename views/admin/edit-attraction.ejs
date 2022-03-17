@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header class="header-position">
+        <%- include('../partials/admin-header'); %>
+    </header>
+    <main>
+        <h2>Gestion des attractions</h2>
+        <% if (attractions.length > 0 ) { %>
+            <% for (let attraction of attractions) { %>
+                <div class="admin-modif">
+                    <form action="/admin/edit-attraction" method="POST">
+                        <p>Attraction numéro : <%= attraction.id %></p>
+                        <input type="hidden" value="<%= attraction.id %>" name="id">
+                        <div class="admin-input ">
+                            <label for="nom">Nom</label>
+                            <input type="text" value=" <%= attraction.nom %>" name="nom">
+                        </div>
+                        <div class="admin-input ">
+                            <label for="image">Image</label>
+                            <input type="text" value="<%= attraction.image %>" name="image" >
+                        </div>
+                        <div class="admin-input ">
+                            <label for="description">Description</label>
+                            <input type="text" value="<%= attraction.description %>" name="description">
+                        </div>
+                        <button type="submit">Modifier</button>
+                    </form>
+                    <form action="/admin/edit-attraction/delete-attraction" method="POST">
+                        <input type="hidden" value="<%= attraction.id %>" name="id">
+                        <button  type="submit">Supprimer</button>
+                    </form>
+                </div>
+            <% } %>
+        <% } else { %> 
+            <p>Merci d'ajouter une attraction</p>
+        <% } %>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
+
